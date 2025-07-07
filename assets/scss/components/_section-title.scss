@@ -1,0 +1,80 @@
+/* === section-title scss (Home 01) === */
+.section-title__wrapper {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: 430px 810px 1fr;
+
+    @media #{$xxl} {
+        grid-template-columns: 400px 650px 1fr;
+    }
+
+    @media #{$xl} {
+        grid-template-columns: 300px 500px 1fr;
+    }
+
+    @media #{$lg} {
+        grid-template-columns: 130px 460px 1fr;
+    }
+
+    @media #{$md} {
+        grid-template-columns: 1fr;
+    }
+
+    @media #{$xs} {
+        gap: 20px;
+    }
+
+    .section-sub-title {
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 10px;
+        line-height: 20px;
+        margin-left: 50px;
+        position: relative;
+        letter-spacing: -0.48px;
+
+        &::before {
+            left: 0;
+            top: 50%;
+            width: 40px;
+            content: "";
+            height: 1px;
+            position: absolute;
+            background: var(--primary);
+            transform: translate(-50px, 0px);
+        }
+    }
+
+    .section-title {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 50px;
+        letter-spacing: -2.5px;
+
+        @media #{$md} {
+            margin-top: 0;
+            letter-spacing: 0;
+
+            br {
+                display: none;
+            }
+        }
+
+        @media #{$xs} {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        span {
+            font-family: var(--font_tartuffotrial);
+        }
+    }
+
+    .desc {
+        margin-top: 10px;
+
+        @media #{$md} {
+            margin-top: 0;
+        }
+    }
+}
