@@ -50,6 +50,7 @@
   });
 
 
+  /* === panel (index 01) === */
   gsap.utils.toArray(".panel").forEach(panel => {
     gsap.to(panel, {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
@@ -62,6 +63,22 @@
       }
     });
   });
+
+
+  /* === design-showcase__active (index 01) === */
+
+  if ($(".design-showcase__active").length > 0) {
+    var design_showcase = new Swiper(".design-showcase__active", {
+      slidesPerView: 1,
+      loop: true,
+      spaceBetween: 10,
+      speed: 2000,
+      pagination: {
+        el: ".design-showcase-pagination",
+        clickable: true,
+      },
+    });
+  }
 })(jQuery);
 
 
