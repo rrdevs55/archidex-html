@@ -699,7 +699,17 @@
     border-right: 1px solid var(--primary);
 
     @media #{$md} {
+        width: 740px;
+        margin: 0 auto;
         border-right: none;
+    }
+
+    @media #{$sm} {
+        width: 545px;
+    }
+
+    @media #{$xs} {
+        width: 290px;
     }
 
     img {
