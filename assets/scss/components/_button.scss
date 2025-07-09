@@ -86,4 +86,24 @@
       transition: all 0.5s;
     }
   }
+
+  &.btn-black {
+    background: var(--primary);
+
+    &::before {
+      background-color: var(--white);
+    }
+
+    .btn-wrap {
+      text-transform: uppercase;
+
+      .text-one {
+        color: var(--white);
+      }
+
+      .text-two {
+        color: var(--primary);
+      }
+    }
+  }
 }
