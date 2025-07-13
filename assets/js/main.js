@@ -65,7 +65,7 @@
   });
 
 
-  /* === design-showcase__active (index 01) === */
+  /* === design-showcase__active (index 02) === */
 
   if ($(".design-showcase__active").length > 0) {
     var design_showcase = new Swiper(".design-showcase__active", {
@@ -79,6 +79,68 @@
       },
     });
   }
+
+
+  /* === project-showcase-2 (index 03) === */
+  if ($('.project-showcase-2')) {
+    document.querySelectorAll('.project-showcase-2__item').forEach(item => {
+      const media = item.querySelector('.project-showcase-2__media');
+      const viewProjects = item.querySelector('.view-projects');
+
+      // 🔒 Ensure closed state on load
+      gsap.set(media, {
+        height: 0,
+        marginTop: 0,
+        marginBottom: 0,
+      });
+
+      gsap.set(viewProjects, {
+        height: 0,
+      });
+
+      // 🔀 Shuffle images
+      const thumbs = Array.from(media.querySelectorAll('.thumb'));
+      const shuffledThumbs = thumbs.sort(() => 0.5 - Math.random());
+
+      media.innerHTML = '';
+      shuffledThumbs.forEach(thumb => media.appendChild(thumb));
+
+      // Hover Animation
+      item.addEventListener('mouseenter', () => {
+        gsap.to(media, {
+          height: media.scrollHeight,
+          marginTop: 30,
+          marginBottom: 26,
+          duration: 0.9,
+          ease: "power2.out"
+        });
+
+        gsap.to(viewProjects, {
+          height: viewProjects.scrollHeight,
+          duration: 0.9,
+          ease: "power2.out"
+        });
+      });
+
+      item.addEventListener('mouseleave', () => {
+        gsap.to(media, {
+          height: 0,
+          marginTop: 0,
+          marginBottom: 0,
+          duration: 0.9,
+          ease: "power2.inOut"
+        });
+
+        gsap.to(viewProjects, {
+          height: 0,
+          duration: 0.9,
+          ease: "power2.inOut"
+        });
+      });
+    });
+  }
+
+
 })(jQuery);
 
 
