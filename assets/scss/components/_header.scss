@@ -11,7 +11,7 @@
 
     &__inner {
         gap: 30px;
-        margin: 17px 0;
+        margin: 17px 0px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -41,6 +41,12 @@
         }
     }
 
+    .header__logo {
+        img {
+            max-width: 115px;
+        }
+    }
+
     .sticky,
     .transformed {
         background-color: #FFFFFF;
@@ -66,8 +72,8 @@
 
             font-size: 16px;
             font-weight: 400;
-            padding: 29px 14px;
-            color: var(--white);
+            padding: 21.5px 14px;
+            color: var(--black);
 
             @media #{$xl} {
                 padding: 29px 10px;
@@ -176,6 +182,149 @@
             .icon {
                 top: 2px;
                 transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+
+/* === header scss (index 01) === */
+.header-area-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .header-main {
+        border-bottom: 1px solid var(--border);
+
+        @media #{$xs} {
+            padding: 10px 0;
+        }
+    }
+
+    &__inner {
+        gap: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-right {
+        gap: 30px;
+        display: flex;
+        align-items: center;
+
+        .side-toggle {
+            .bar-icon {
+                width: 30px;
+                height: 7px;
+
+                span {
+                    height: 2px;
+                    border-radius: 500px;
+                    background: var(--primary);
+
+                    &:nth-child(2) {
+                        margin-left: -10px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .header__logo {
+        img {
+            max-width: 24px;
+        }
+    }
+
+    .sticky,
+    .transformed {
+        background-color: #FFFFFF;
+    }
+
+    .header__nav-2 {
+        margin-right: auto;
+        padding-left: 30px;
+        border-left: 1px solid var(--border);
+    }
+
+    .main-menu {
+
+        >ul {
+            display: flex;
+
+            >li {
+                &:hover {
+                    >a {
+                        color: #999999;
+                    }
+
+                }
+            }
+        }
+
+
+        li a {
+
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--black);
+            padding: 21.5px 14px;
+            text-transform: uppercase;
+
+            @media #{$xl} {
+                padding: 22px 10px;
+            }
+
+            &:hover {
+                color: var(--white);
+            }
+        }
+    }
+
+    .header-meta {
+        @media #{$sm} {
+            display: none;
+        }
+
+        .date {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 18px;
+            color: var(--primary);
+            letter-spacing: -0.48px;
+        }
+    }
+
+    .header__navicon {
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        border-left: 1px solid var(--border);
+    }
+
+    .rr-btn {
+        border: none;
+        border-radius: 0;
+        background: var(--black);
+        padding: 19.5px 22px;
+
+        @media #{$xs} {
+            display: none;
+        }
+
+        .btn-wrap {
+
+            .text-one,
+            .text-two {
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--white);
+                text-transform: uppercase;
             }
         }
     }

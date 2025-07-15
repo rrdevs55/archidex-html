@@ -123,14 +123,14 @@
             height: 0,
             marginTop: 0,
             marginBottom: 0,
-            duration: 0.7,
+            duration: 0.5,
             ease: "power2.inOut"
           });
 
           gsap.to(viewProjects, {
             height: 0,
             marginBottom: 0,
-            duration: 0.7,
+            duration: 0.5,
             ease: "power2.inOut"
           });
         });
@@ -141,14 +141,14 @@
             height: currentMedia.scrollHeight,
             marginTop: 30,
             marginBottom: 26,
-            duration: 0.9,
+            duration: 0.5,
             ease: "power2.out"
           });
 
           gsap.to(currentViewProjects, {
             height: currentViewProjects.scrollHeight,
             marginBottom: 20,
-            duration: 0.9,
+            duration: 0.5,
             ease: "power2.out"
           });
         }
@@ -157,6 +157,7 @@
   }
 
 
+  /* === project-showcase-2 (index 03) === */
   document.addEventListener("DOMContentLoaded", () => {
     const textEls = document.querySelectorAll(".text-drow");
 
@@ -186,13 +187,46 @@
         duration: 0.5,
         stagger: 0.1,
         ease: "power1.inOut",
-        repeat: -1,
-        yoyo: true
       });
     });
   });
 
+  const elements = document.querySelectorAll(".mouse-parallax");
 
+  elements.forEach((element) => {
+    const inner = element.querySelector(".inner");
+
+    element.addEventListener("mousemove", (e) => {
+      const rect = element.getBoundingClientRect();
+      const offsetX = e.clientX - rect.left;
+      const offsetY = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const deltaX = offsetX - centerX;
+      const deltaY = offsetY - centerY;
+
+      gsap.to(inner, {
+        x: deltaX * 0.6,       // movement intensity কমানো হয়েছে
+        y: deltaY * 0.6,
+        rotationY: deltaX * 0.25,
+        rotationX: -deltaY * 0.25,
+        duration: 0.6,
+        ease: "power3.out",
+      });
+    });
+
+    element.addEventListener("mouseleave", () => {
+      gsap.to(inner, {
+        x: 0,
+        y: 0,
+        rotationX: 0,
+        rotationY: 0,
+        duration: 0.7,
+        ease: "power4.out",
+      });
+    });
+  });
 
 })(jQuery);
 

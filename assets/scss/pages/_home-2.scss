@@ -33,31 +33,39 @@
 
     &::before {
         left: 0;
-        top: 80px;
+        top: 60px;
         content: "";
         width: 1px;
         z-index: -1;
         height: 100%;
         position: absolute;
         background: #ECECEC;
+
+        @media #{$xs} {
+            display: none;
+        }
     }
 
     &::after {
         right: 0;
-        top: 80px;
+        top: 60px;
         content: "";
         width: 1px;
         z-index: -1;
         height: 100%;
         position: absolute;
         background: #ECECEC;
+
+        @media #{$xs} {
+            display: none;
+        }
     }
 
     .line {
 
         &::before {
             left: 463px;
-            top: 80px;
+            top: 60px;
             content: "";
             width: 1px;
             z-index: -1;
@@ -76,11 +84,15 @@
             @media #{$md} {
                 left: 182px;
             }
+
+            @media #{$xs} {
+                display: none;
+            }
         }
 
         &::after {
             right: 463px;
-            top: 80px;
+            top: 60px;
             content: "";
             width: 1px;
             z-index: -1;
@@ -99,18 +111,26 @@
             @media #{$md} {
                 right: 182px;
             }
+
+            @media #{$xs} {
+                display: none;
+            }
         }
 
         span {
             &::before {
                 left: 50%;
-                top: 80px;
+                top: 60px;
                 content: "";
                 width: 1px;
                 z-index: -1;
                 height: 100%;
                 position: absolute;
                 background: #ECECEC;
+
+                @media #{$xs} {
+                    display: none;
+                }
             }
         }
     }
@@ -416,6 +436,7 @@
         }
 
         .rr-btn {
+            font-size: 13px;
             text-transform: uppercase;
         }
     }
@@ -567,7 +588,7 @@
 .our-services-2__wrapper {
     display: grid;
     gap: 20px 40px;
-    grid-template-columns: repeat(5, 330px);
+    grid-template-columns: repeat(5, 336px);
 
     @media #{$xxl} {
         gap: 20px 30px;
@@ -664,23 +685,23 @@
 /* === interaction-2 Section (Home 02) === */
 
 .interaction-2__inner {
-    padding-top: 300px;
-    padding-bottom: 222px;
+    // padding-top: 300px;
+    // padding-bottom: 222px;
 
-    @media #{$xxl} {
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
+    // @media #{$xxl} {
+    //     padding-top: 100px;
+    //     padding-bottom: 100px;
+    // }
 
-    @media #{$xl} {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
+    // @media #{$xl} {
+    //     padding-top: 80px;
+    //     padding-bottom: 80px;
+    // }
 
-    @media #{$md} {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
+    // @media #{$md} {
+    //     padding-top: 60px;
+    //     padding-bottom: 60px;
+    // }
 
     .section-title-2 {
 
