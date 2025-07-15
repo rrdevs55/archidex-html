@@ -89,6 +89,9 @@
 
   &.btn-black {
     background: var(--primary);
+    font-size: 13px;
+    padding: 11.5px 28px;
+
 
     &::before {
       background-color: var(--white);

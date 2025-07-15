@@ -414,15 +414,23 @@
                 font-size: 19px;
             }
         }
+
+        .rr-btn {
+            text-transform: uppercase;
+        }
     }
 }
 
-/* ===about-us-2 Section (Home 02) === */
+/* === project-showcase-2 Section (Home 02) === */
 
 .project-showcase-2__item {
     overflow: hidden;
+    margin-top: -1px;
+    cursor: pointer;
 
     .view-projects {
+        position: relative;
+        z-index: -2;
 
         a {
             gap: 8px;
@@ -444,12 +452,6 @@
                 left: 0;
                 background: var(--primary);
             }
-        }
-    }
-
-    &:hover {
-        .view-projects {
-            margin-bottom: 25px;
         }
     }
 }
@@ -524,11 +526,18 @@
         grid-template-columns: 1fr;
     }
 
-    .title {
+    .project {
         font-size: 24px;
         font-weight: 500;
         line-height: 26px;
         letter-spacing: -1.2px;
+    }
+
+    .title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: -0.8px;
     }
 
     a {
@@ -539,24 +548,14 @@
 .project-showcase-2__media {
     gap: 30px;
     display: flex;
-    justify-content: space-between;
     transition: all 0.3s ease-out;
 
-    @media #{$sm} {
-        gap: 10px;
-    }
-
-    @media #{$xs} {
-        flex-wrap: wrap;
-    }
-
-    .thumb {
-
-        img {
-            width: 100%;
-            object-fit: cover;
+    >* {
+        &:nth-child(3) {
+            margin-left: auto;
         }
     }
+
 }
 
 
@@ -568,7 +567,12 @@
 .our-services-2__wrapper {
     display: grid;
     gap: 20px 40px;
-    grid-template-columns: repeat(4, 330px);
+    grid-template-columns: repeat(5, 330px);
+
+    @media #{$xxl} {
+        gap: 20px 30px;
+        grid-template-columns: repeat(5, 258px);
+    }
 
     @media #{$xl} {
         gap: 20px 20px;
@@ -611,22 +615,10 @@
     .content {
         margin-right: 40px;
         padding-top: 20px;
-        position: relative;
+        border-top: 1px solid #DADADA;
 
         @media #{$xl} {
             margin-right: 20px;
-        }
-
-        &::before {
-            top: 0;
-            left: 0;
-            height: 1px;
-            content: "";
-            width: 0%;
-            position: absolute;
-            position: absolute;
-            background: #DADADA;
-            transition: all 0.3s;
         }
     }
 
@@ -646,7 +638,7 @@
 
     .text {
 
-        .title {
+        .project {
             font-size: 20px;
             font-weight: 500;
             line-height: 26px;

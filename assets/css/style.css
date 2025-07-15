@@ -1213,6 +1213,8 @@ section {
 }
 .rr-btn.btn-black {
   background: var(--primary);
+  font-size: 13px;
+  padding: 11.5px 28px;
 }
 .rr-btn.btn-black::before {
   background-color: var(--white);
@@ -2299,6 +2301,10 @@ section {
   margin-bottom: 70px;
   letter-spacing: -7.5px;
   text-transform: uppercase;
+  width: 1090px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media only screen and (max-width: 1399px) {
   .hero__content .title {
@@ -2504,8 +2510,12 @@ section {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+  padding: 9px 15px;
   margin-bottom: 32px;
+  border-radius: 500px;
+  display: inline-block;
   letter-spacing: -0.48px;
+  border: 1px solid #DADADA;
 }
 @media only screen and (max-width: 767px) {
   .projects__item .projects__content .text .sub-title {
@@ -2518,8 +2528,34 @@ section {
   line-height: 26px;
   letter-spacing: -1.2px;
 }
-.projects__item .projects__content .projects-btn {
+.projects__item .projects__content .text .title a:hover {
+  color: var(--secondary);
+}
+.projects__item .projects__content .projects__info {
+  gap: 30px;
+  display: flex;
   margin-top: auto;
+}
+@media only screen and (max-width: 767px) {
+  .projects__item .projects__content .projects__info {
+    margin-top: 30px;
+  }
+}
+.projects__item .projects__content .projects__info .projects__box .sub-title {
+  color: #999;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 4px;
+  letter-spacing: -0.48px;
+}
+.projects__item .projects__content .projects__info .projects__box .title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--black);
+  letter-spacing: -0.48px;
 }
 .projects__item .projects__media {
   padding-left: 40px;
@@ -2652,7 +2688,7 @@ section {
   position: relative;
   align-items: center;
   letter-spacing: -0.6px;
-  padding: 24px 0px 23px 0;
+  padding: 24px 10px 23px 10px;
   justify-content: space-between;
   border-bottom: 1px solid #DADADA;
   transition: 0.3s transform ease-in-out, background-color 0.3s ease;
@@ -2666,6 +2702,7 @@ section {
 .services__wrapper .services__item span {
   position: relative;
   padding-right: 4px;
+  transition: all 0.3s;
 }
 .services__wrapper .services__item span::before {
   content: "";
@@ -2673,8 +2710,9 @@ section {
   right: 0;
   width: 3px;
   height: 3px;
-  border-radius: 500px;
   position: absolute;
+  border-radius: 500px;
+  transition: all 0.3s;
   background: var(--primary);
 }
 .services__wrapper .services__item a {
@@ -2687,6 +2725,18 @@ section {
   rotate: -44deg;
   font-size: 15px;
 }
+.services__wrapper .services__item:hover {
+  border-color: transparent;
+}
+.services__wrapper .services__item:hover span {
+  color: var(--white);
+}
+.services__wrapper .services__item:hover span::before {
+  background: var(--white);
+}
+.services__wrapper .services__item:hover a {
+  color: var(--white);
+}
 .services__wrapper .active-bg {
   left: 0;
   right: 0;
@@ -2695,7 +2745,7 @@ section {
   opacity: 0;
   position: absolute;
   pointer-events: none;
-  background: #F8F8F8;
+  background: var(--black);
   transform: translateY(0);
   transform-origin: top center;
   transition: transform 0.4s ease, height 0.4s ease, opacity 0.4s ease;
@@ -3412,10 +3462,19 @@ section {
     font-size: 19px;
   }
 }
+.about-us-2__content .text .rr-btn {
+  text-transform: uppercase;
+}
 
-/* ===about-us-2 Section (Home 02) === */
+/* === project-showcase-2 Section (Home 02) === */
 .project-showcase-2__item {
   overflow: hidden;
+  margin-top: -1px;
+  cursor: pointer;
+}
+.project-showcase-2__item .view-projects {
+  position: relative;
+  z-index: -2;
 }
 .project-showcase-2__item .view-projects a {
   gap: 8px;
@@ -3436,9 +3495,6 @@ section {
   bottom: 0;
   left: 0;
   background: var(--primary);
-}
-.project-showcase-2__item:hover .view-projects {
-  margin-bottom: 25px;
 }
 
 .project-showcase-2-meta {
@@ -3522,11 +3578,17 @@ section {
     grid-template-columns: 1fr;
   }
 }
-.project-showcase-2__list .title {
+.project-showcase-2__list .project {
   font-size: 24px;
   font-weight: 500;
   line-height: 26px;
   letter-spacing: -1.2px;
+}
+.project-showcase-2__list .title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.8px;
 }
 .project-showcase-2__list a {
   color: var(--primary);
@@ -3535,22 +3597,10 @@ section {
 .project-showcase-2__media {
   gap: 30px;
   display: flex;
-  justify-content: space-between;
   transition: all 0.3s ease-out;
 }
-@media only screen and (max-width: 767px) {
-  .project-showcase-2__media {
-    gap: 10px;
-  }
-}
-@media (max-width: 575px) {
-  .project-showcase-2__media {
-    flex-wrap: wrap;
-  }
-}
-.project-showcase-2__media .thumb img {
-  width: 100%;
-  object-fit: cover;
+.project-showcase-2__media > *:nth-child(3) {
+  margin-left: auto;
 }
 
 /* === our-services-2_ Section (Home 02) === */
@@ -3561,7 +3611,13 @@ section {
 .our-services-2__wrapper {
   display: grid;
   gap: 20px 40px;
-  grid-template-columns: repeat(4, 330px);
+  grid-template-columns: repeat(5, 330px);
+}
+@media only screen and (max-width: 1919px) {
+  .our-services-2__wrapper {
+    gap: 20px 30px;
+    grid-template-columns: repeat(5, 258px);
+  }
 }
 @media only screen and (max-width: 1399px) {
   .our-services-2__wrapper {
@@ -3599,23 +3655,12 @@ section {
 .our-services-2__item .content {
   margin-right: 40px;
   padding-top: 20px;
-  position: relative;
+  border-top: 1px solid #DADADA;
 }
 @media only screen and (max-width: 1399px) {
   .our-services-2__item .content {
     margin-right: 20px;
   }
-}
-.our-services-2__item .content::before {
-  top: 0;
-  left: 0;
-  height: 1px;
-  content: "";
-  width: 0%;
-  position: absolute;
-  position: absolute;
-  background: #DADADA;
-  transition: all 0.3s;
 }
 .our-services-2__item span {
   font-size: 16px;
@@ -3631,7 +3676,7 @@ section {
     margin-bottom: 150px;
   }
 }
-.our-services-2__item .text .title {
+.our-services-2__item .text .project {
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
