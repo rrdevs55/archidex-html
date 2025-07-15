@@ -1923,6 +1923,12 @@ section {
   display: flex;
   align-items: center;
 }
+.header-area-2 .header-right .side-toggle {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .header-area-2 .header-right .side-toggle .bar-icon {
   width: 30px;
   height: 7px;
@@ -1981,10 +1987,8 @@ section {
   letter-spacing: -0.48px;
 }
 .header-area-2 .header__navicon {
-  gap: 20px;
   display: flex;
   align-items: center;
-  padding-left: 20px;
   border-left: 1px solid var(--border);
 }
 .header-area-2 .rr-btn {
