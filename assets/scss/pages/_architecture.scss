@@ -190,10 +190,8 @@
         }
     }
 
-    .rr-btn {
-        padding: 24px 37px;
-        letter-spacing: -0.8px;
-        text-transform: math-auto;
+    .rr-btn-primary {
+        margin: 0 auto;
 
         @media #{$sm} {
             padding: 19px 24px;
@@ -290,14 +288,14 @@
         .text {
 
             .sub-title {
-                font-size: 16px;
+                font-size: 14px;
                 font-weight: 500;
                 line-height: 20px;
-                padding: 9px 15px;
-                margin-bottom: 32px;
+                padding: 4px 12px;
+                margin-bottom: 25222px;
                 border-radius: 500px;
                 display: inline-block;
-                letter-spacing: -0.48px;
+                letter-spacing: -0.42px;
                 border: 1px solid #DADADA;
 
                 @media #{$sm} {

@@ -82,7 +82,7 @@
 
 
   /* === project-showcase-2 (index 03) === */
-  if (document.querySelector('.project-showcase-2')) {
+  if ($('.project-showcase-2')) {
     const items = document.querySelectorAll('.project-showcase-2__item');
 
     items.forEach(item => {
@@ -157,18 +157,16 @@
   }
 
 
-  /* === project-showcase-2 (index 03) === */
+  /* === text-drow (index 04) === */
   document.addEventListener("DOMContentLoaded", () => {
     const textEls = document.querySelectorAll(".text-drow");
 
     textEls.forEach(textEl => {
-      // Store original child nodes (text nodes and <br> nodes)
       const nodes = Array.from(textEl.childNodes);
-      textEl.innerHTML = ""; // Clear the container
+      textEl.innerHTML = "";
 
       nodes.forEach(node => {
         if (node.nodeType === Node.TEXT_NODE) {
-          // For each text node, wrap every character in a span
           node.textContent.split("").forEach(char => {
             const span = document.createElement("span");
             span.textContent = char === " " ? "\u00A0" : char;
@@ -176,10 +174,8 @@
             textEl.appendChild(span);
           });
         } else if (node.nodeName === "BR") {
-          // Append the <br> node as is
           textEl.appendChild(node);
         }
-        // You can add more conditions if you want to support other elements
       });
 
       gsap.to(textEl.querySelectorAll("span"), {
@@ -191,6 +187,8 @@
     });
   });
 
+
+  /* === mouse-parallax (index 04) === */
   const elements = document.querySelectorAll(".mouse-parallax");
 
   elements.forEach((element) => {
@@ -207,7 +205,7 @@
       const deltaY = offsetY - centerY;
 
       gsap.to(inner, {
-        x: deltaX * 0.6,       // movement intensity কমানো হয়েছে
+        x: deltaX * 0.6,
         y: deltaY * 0.6,
         rotationY: deltaX * 0.25,
         rotationX: -deltaY * 0.25,
@@ -228,6 +226,42 @@
     });
   });
 
+
+  /* === mouse-parallax (index 04) === */
+
+  // Select all buttons with the class .rr-btn-primary
+  const buttons = document.querySelectorAll(".rr-btn-primary");
+
+  buttons.forEach(button => {
+    const textEl = button.querySelector(".text");
+
+    // Skip if this button doesn't have a text element
+    if (!textEl) return;
+
+    const hasIcon = button.querySelector(".left-icon") || button.querySelector(".right-icon");
+    if (hasIcon) {
+      button.classList.add("has-icon");
+    }
+
+    const text = textEl.textContent;
+    textEl.innerHTML = "";
+    text.split("").forEach((char, index) => {
+      const span = document.createElement("span");
+      span.innerHTML = char === ' ' ? '&nbsp;' : char;
+      const delay = (text.length - index) * 0.03;
+      span.style.transitionDelay = `${delay}s`;
+      textEl.appendChild(span);
+    });
+
+    button.addEventListener("mouseenter", () => {
+      const spans = textEl.querySelectorAll("span");
+      spans.forEach(span => {
+        span.classList.remove("animate");
+        void span.offsetWidth; // This triggers a reflow, resetting the animation
+        span.classList.add("animate");
+      });
+    });
+  });
 })(jQuery);
 
 
