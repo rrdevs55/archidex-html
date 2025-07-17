@@ -2394,6 +2394,14 @@ section {
     padding-top: 100px;
   }
 }
+.hero-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100vh;
+  z-index: 100;
+}
 .hero-nav::before {
   top: 80px;
   left: 87px;
@@ -2401,11 +2409,10 @@ section {
   content: "";
   height: 10000px;
   position: absolute;
-  background-color: var(--border);
 }
 .hero-nav__content {
   left: 25px;
-  bottom: 52px;
+  bottom: 0;
   display: flex;
   position: absolute;
 }
@@ -2413,6 +2420,7 @@ section {
   margin-top: 205px;
 }
 .hero-nav__content p {
+  width: 152px;
   font-size: 16px;
   font-weight: 500;
   margin-left: 30px;
@@ -2459,13 +2467,10 @@ section {
   font-size: 250px;
   font-weight: 500;
   line-height: 195px;
+  text-align: center;
   margin-bottom: 70px;
   letter-spacing: -7.5px;
   text-transform: uppercase;
-  width: 1090px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media only screen and (max-width: 1399px) {
   .hero__content .title {
