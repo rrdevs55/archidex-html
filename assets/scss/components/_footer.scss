@@ -141,43 +141,65 @@
     .footer-nav-list {
         margin-top: auto;
 
-        &:hover {
-
-            li a {
-                opacity: 0.3;
-            }
-        }
-
         li {
             color: var(--primary);
-            transition-duration: 500ms;
-            transition-property: opacity;
             list-style: none;
             font-size: 16px;
             font-weight: 500;
             line-height: 18px;
             letter-spacing: -0.48px;
+        }
 
+    }
+
+    $color_1: #000;
+
+    .footer-nav-list {
+        margin-top: auto;
+
+        li {
             a {
-                display: block;
+                list-style: none;
+                font-size: 16px;
+                font-weight: 500;
+                overflow: hidden;
+                line-height: 18px;
+                position: relative;
+                color: var(--primary);
+                display: inline-block;
+                text-decoration: none;
+                letter-spacing: -0.48px;
 
-                &:hover {
-                    opacity: 1;
-
-                    a strong {
-                        opacity: 1;
-                        top: -23px;
-                    }
+                span {
+                    display: inline-block;
+                    transform: translateY(0%);
+                    transition: transform 0.3s ease;
                 }
 
-                a strong {
-                    opacity: 0;
-                    transition-property: opacity, top;
-                    transition-duration: 250ms;
+                &::after {
+                    content: attr(data-text);
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    width: 100%;
+                    display: inline-block;
+                    color: $color_1;
+                    transition: top 0.3s ease;
+                }
+
+                &:hover {
+                    span {
+                        transform: translateY(-100%);
+                    }
+
+                    &::after {
+                        top: 0;
+                    }
                 }
             }
         }
     }
+
 
     .footer-location {
         margin-top: auto;
