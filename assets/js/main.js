@@ -49,24 +49,7 @@
     Team_animation();
   });
 
-
-  /* === panel (index 01) === */
-  gsap.utils.toArray(".panel").forEach(panel => {
-    gsap.to(panel, {
-      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-      duration: 2,
-      ease: "cubic-bezier(0.785, 0.135, 0.15, 0.86)",
-      scrollTrigger: {
-        trigger: panel,
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
-    });
-  });
-
-
   /* === design-showcase__active (index 02) === */
-
   if ($(".design-showcase__active").length > 0) {
     var design_showcase = new Swiper(".design-showcase__active", {
       slidesPerView: 1,
@@ -79,7 +62,6 @@
       },
     });
   }
-
 
   /* === project-showcase-2 (index 03) === */
   if ($('.project-showcase-2')) {
@@ -187,10 +169,8 @@
     });
   });
 
-
   /* === mouse-parallax (index 04) === */
   const elements = document.querySelectorAll(".mouse-parallax");
-
   elements.forEach((element) => {
     const inner = element.querySelector(".inner");
 
@@ -226,19 +206,14 @@
     });
   });
 
-
   /* === mouse-parallax (index 04) === */
-
-  // Select all buttons with the class .rr-btn-primary
   const buttons = document.querySelectorAll(".rr-btn-primary");
-
   buttons.forEach(button => {
     const textEl = button.querySelector(".text");
 
-    // Skip if this button doesn't have a text element
     if (!textEl) return;
 
-    const hasIcon = button.querySelector(".left-icon") || button.querySelector(".right-icon");
+    const hasIcon = button.querySelector(".left-icon") || button.querySelector("i");
     if (hasIcon) {
       button.classList.add("has-icon");
     }
@@ -248,7 +223,7 @@
     text.split("").forEach((char, index) => {
       const span = document.createElement("span");
       span.innerHTML = char === ' ' ? '&nbsp;' : char;
-      const delay = (text.length - index) * 0.03;
+      const delay = (text.length - index) * 0.05;
       span.style.transitionDelay = `${delay}s`;
       textEl.appendChild(span);
     });
@@ -257,11 +232,12 @@
       const spans = textEl.querySelectorAll("span");
       spans.forEach(span => {
         span.classList.remove("animate");
-        void span.offsetWidth; // This triggers a reflow, resetting the animation
+        void span.offsetWidth;
         span.classList.add("animate");
       });
     });
   });
+
 })(jQuery);
 
 

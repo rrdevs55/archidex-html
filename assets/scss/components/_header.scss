@@ -35,7 +35,7 @@
         }
 
         .rr-btn-primary {
-            padding: 13.5px 12px;
+            padding: 13.5px 22.5px;
 
             @media #{$xs} {
                 display: none;
@@ -307,10 +307,8 @@
     }
 
     .header__navicon {
-        // gap: 20px;
         display: flex;
         align-items: center;
-        // padding-left: 20px;
         border-left: 1px solid var(--border);
     }
 
@@ -318,7 +316,7 @@
         border: none;
         border-radius: 0;
         background: var(--black);
-        padding: 21.5px 17px;
+        padding: 21.5px 23px;
         color: var(--white);
 
         .text {

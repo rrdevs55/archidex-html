@@ -119,11 +119,10 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
-  padding: 26px 28px;
+  padding: 26px 35px;
   color: var(--black);
   align-items: center;
   border-radius: 500px;
-  letter-spacing: -0.8px;
   justify-content: center;
   border: 1px solid var(--border);
   transition: background 0.3s ease;
@@ -134,31 +133,25 @@
     z-index: 1;
     position: relative;
     display: inline-flex;
+    transition: all 0.2s;
 
     span {
       opacity: 1;
       min-width: 4px;
       transition: none;
       color: var(--black);
+      font-weight: 500;
       display: inline-block;
+      letter-spacing: -0.8px;
       transform: translateX(0) scale(1);
     }
   }
 
-  .right-icon {
+  i {
     font-size: 13px;
     line-height: 14px;
     color: var(--black);
     transition: all 0.3s;
-  }
-
-  .left-icon {
-    opacity: 0;
-    font-size: 13px;
-    display: none;
-    line-height: 14px;
-    transition: all 0.3s;
-    transform: translateX(-100%);
   }
 
   &:hover {
@@ -179,16 +172,28 @@
       }
     }
 
-    .right-icon {
+    i {
       opacity: 0;
       color: var(--white);
       transform: translateX(100%);
     }
+  }
 
-    .left-icon {
-      opacity: 1;
+  &.btn-black {
+    padding: 13.5px 20px;
+    background: var(--black);
+
+    .text {
+
+      span {
+        color: var(--white);
+        letter-spacing: -0.39px;
+        text-transform: uppercase;
+      }
+    }
+
+    i {
       color: var(--white);
-      transform: translateX(100%);
     }
   }
 }

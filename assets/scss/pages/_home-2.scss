@@ -405,7 +405,7 @@
         }
     }
 
-    .text {
+    >.text {
         margin-top: 60px;
 
         @media #{$md} {
@@ -435,8 +435,9 @@
             }
         }
 
-        .rr-btn {
+        .rr-btn-primary {
             font-size: 13px;
+            padding: 13.5px 35px;
             text-transform: uppercase;
         }
     }

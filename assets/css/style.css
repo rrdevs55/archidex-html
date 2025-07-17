@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*-----------------------------------------------------------------------------------
 
   Theme Name: Archidex - Architecture HTML Template
@@ -212,54 +211,6 @@ h6 {
 }
 
 /* animation css */
-.t_parallax_image {
-  overflow: hidden;
-}
-
-.panel {
-  background-color: #00bcd4;
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-  /* content size অনুযায়ী */
-}
-
-/* Initial clip-path states */
-.clip-top {
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-}
-
-.clip-bottom {
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-}
-
-.clip-left {
-  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-}
-
-.clip-right {
-  clip-path: polygon(100% 0, 90% 0, 90% 100%, 100% 100%);
-}
-
-/* Text content styling */
-.panel > div {
-  padding: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  user-select: none;
-  color: white;
-  white-space: nowrap;
-}
-
-/* Image styling */
-.panel img {
-  display: block;
-  /* important for clip-path */
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
-
 /* === Scrollbar scss (index 01) === */
 ::-webkit-scrollbar {
   width: 5px;
@@ -1236,11 +1187,10 @@ section {
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
-  padding: 26px 28px;
+  padding: 26px 35px;
   color: var(--black);
   align-items: center;
   border-radius: 500px;
-  letter-spacing: -0.8px;
   justify-content: center;
   border: 1px solid var(--border);
   transition: background 0.3s ease;
@@ -1251,28 +1201,23 @@ section {
   z-index: 1;
   position: relative;
   display: inline-flex;
+  transition: all 0.2s;
 }
 .rr-btn-primary .text span {
   opacity: 1;
   min-width: 4px;
   transition: none;
   color: var(--black);
+  font-weight: 500;
   display: inline-block;
+  letter-spacing: -0.8px;
   transform: translateX(0) scale(1);
 }
-.rr-btn-primary .right-icon {
+.rr-btn-primary i {
   font-size: 13px;
   line-height: 14px;
   color: var(--black);
   transition: all 0.3s;
-}
-.rr-btn-primary .left-icon {
-  opacity: 0;
-  font-size: 13px;
-  display: none;
-  line-height: 14px;
-  transition: all 0.3s;
-  transform: translateX(-100%);
 }
 .rr-btn-primary:hover {
   background: var(--black);
@@ -1288,15 +1233,22 @@ section {
   transform: translateX(0) scale(1);
   transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
-.rr-btn-primary:hover .right-icon {
+.rr-btn-primary:hover i {
   opacity: 0;
   color: var(--white);
   transform: translateX(100%);
 }
-.rr-btn-primary:hover .left-icon {
-  opacity: 1;
+.rr-btn-primary.btn-black {
+  padding: 13.5px 20px;
+  background: var(--black);
+}
+.rr-btn-primary.btn-black .text span {
   color: var(--white);
-  transform: translateX(100%);
+  letter-spacing: -0.39px;
+  text-transform: uppercase;
+}
+.rr-btn-primary.btn-black i {
+  color: var(--white);
 }
 
 .rr-btn-primary.has-icon:hover .text {
@@ -1853,7 +1805,7 @@ section {
   background: var(--primary);
 }
 .header-area .header-right .rr-btn-primary {
-  padding: 13.5px 12px;
+  padding: 13.5px 22.5px;
 }
 @media (max-width: 575px) {
   .header-area .header-right .rr-btn-primary {
@@ -2072,7 +2024,7 @@ section {
   border: none;
   border-radius: 0;
   background: var(--black);
-  padding: 21.5px 17px;
+  padding: 21.5px 23px;
   color: var(--white);
 }
 .header-area-2 .rr-btn-primary .text span {
@@ -3645,15 +3597,15 @@ section {
   height: 100%;
   object-fit: cover;
 }
-.about-us-2__content .text {
+.about-us-2__content > .text {
   margin-top: 60px;
 }
 @media only screen and (max-width: 991px) {
-  .about-us-2__content .text {
+  .about-us-2__content > .text {
     margin-top: 30px;
   }
 }
-.about-us-2__content .text .title {
+.about-us-2__content > .text .title {
   font-size: 30px;
   font-weight: 500;
   max-width: 710px;
@@ -3662,24 +3614,25 @@ section {
   letter-spacing: -1.5px;
 }
 @media only screen and (max-width: 1199px) {
-  .about-us-2__content .text .title {
+  .about-us-2__content > .text .title {
     font-size: 25px;
     letter-spacing: 0;
   }
 }
 @media only screen and (max-width: 991px) {
-  .about-us-2__content .text .title {
+  .about-us-2__content > .text .title {
     font-size: 22px;
     margin-bottom: 30px;
   }
 }
 @media only screen and (max-width: 991px) {
-  .about-us-2__content .text .title {
+  .about-us-2__content > .text .title {
     font-size: 19px;
   }
 }
-.about-us-2__content .text .rr-btn {
+.about-us-2__content > .text .rr-btn-primary {
   font-size: 13px;
+  padding: 13.5px 35px;
   text-transform: uppercase;
 }
 
