@@ -2409,6 +2409,7 @@ section {
   content: "";
   height: 10000px;
   position: absolute;
+  background-color: var(--border);
 }
 .hero-nav__content {
   left: 25px;
