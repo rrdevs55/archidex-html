@@ -4,6 +4,8 @@
     top: 0;
     left: 0;
     width: 100%;
+    mix-blend-mode: exclusion;
+    background-color: #000;
 
     .header-main {
         border-bottom: 1px solid var(--border);
@@ -100,8 +102,7 @@
             font-size: 16px;
             font-weight: 500;
             line-height: 18px;
-            color: var(--primary);
-            mix-blend-mode: exclusion;
+            color: var(--white);
             letter-spacing: -0.48px;
         }
     }
@@ -153,13 +154,14 @@
             font-size: 16px;
             font-weight: 500;
             line-height: 20px;
-            color: var(--primary);
+            color: var(--white);
             letter-spacing: -0.48px;
             font-family: var(--font_bai);
         }
 
         .icon {
             top: 0;
+            color: var(--white);
             right: 0;
             position: absolute;
             transition: all 0.3s;
@@ -174,7 +176,7 @@
             line-height: 1;
             min-height: auto;
             padding: 12px 0;
-            color: var(--primary);
+            color: var(--white);
         }
 
         &:after {

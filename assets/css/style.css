@@ -1780,6 +1780,8 @@ section {
   top: 0;
   left: 0;
   width: 100%;
+  mix-blend-mode: exclusion;
+  background-color: #000;
 }
 .header-area .header-main {
   border-bottom: 1px solid var(--border);
@@ -1851,8 +1853,7 @@ section {
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  color: var(--primary);
-  mix-blend-mode: exclusion;
+  color: var(--white);
   letter-spacing: -0.48px;
 }
 .header-area .header__navicon {
@@ -1899,12 +1900,13 @@ section {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  color: var(--primary);
+  color: var(--white);
   letter-spacing: -0.48px;
   font-family: var(--font_bai);
 }
 .header-area .nice-select .icon {
   top: 0;
+  color: var(--white);
   right: 0;
   position: absolute;
   transition: all 0.3s;
@@ -1917,7 +1919,7 @@ section {
   line-height: 1;
   min-height: auto;
   padding: 12px 0;
-  color: var(--primary);
+  color: var(--white);
 }
 .header-area .nice-select:after {
   display: none;
@@ -2442,7 +2444,7 @@ section {
   font-weight: 500;
   margin-left: 30px;
   line-height: 18px;
-  color: var(--primary);
+  color: var(--white);
   transform: rotate(-90deg);
   letter-spacing: -0.48px;
   font-family: var(--font_bai);
@@ -2461,7 +2463,7 @@ section {
 }
 .hero-nav .side-toggle .bar-icon span {
   height: 1px;
-  background: var(--primary);
+  background: var(--white);
 }
 
 .hero__content {
