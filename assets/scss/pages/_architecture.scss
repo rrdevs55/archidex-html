@@ -15,7 +15,11 @@
         background: #fff;
 
         @media #{$xxl} {
-            transform-origin: center 20%;
+            transform-origin: center 16%;
+        }
+
+        @media #{$lg} {
+            transform-origin: center 20%
         }
 
         @media #{$sm} {

@@ -2397,6 +2397,11 @@ section {
 }
 @media only screen and (max-width: 1919px) {
   .hero__inner {
+    transform-origin: center 16%;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .hero__inner {
     transform-origin: center 20%;
   }
 }
