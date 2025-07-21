@@ -1,10 +1,22 @@
 /* === Hero Section (Home 01) === */
+
 .hero {
+    background: black;
+    width: 100%;
+
     &__inner {
         overflow: hidden;
         padding-top: 146px;
         position: relative;
-        padding-bottom: 120px;
+        width: 100vw;
+        transform: scale(0.1) rotate(0deg);
+        transform-origin: center 16%;
+        margin: 0 auto;
+        background: #fff;
+
+        @media #{$xxl} {
+            transform-origin: center 20%;
+        }
 
         @media #{$sm} {
             padding-bottom: 50px;
@@ -22,6 +34,7 @@
         width: auto;
         height: 100vh;
         z-index: 100;
+        mix-blend-mode: exclusion;
 
         &::before {
             top: 80px;
@@ -41,6 +54,7 @@
 
             img {
                 margin-top: 205px;
+                mix-blend-mode: exclusion;
             }
 
             p {
@@ -53,6 +67,7 @@
                 transform: rotate(-90deg);
                 letter-spacing: -0.48px;
                 font-family: var(--font_bai);
+                mix-blend-mode: exclusion;
             }
         }
 
@@ -78,6 +93,7 @@
 
 .hero__content {
     text-align: center;
+    margin-bottom: 120px;
 
     .sub-title {
         font-size: 20px;

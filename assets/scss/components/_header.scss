@@ -1,6 +1,6 @@
 /* === header scss (index 01) === */
 .header-area {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -101,6 +101,7 @@
             font-weight: 500;
             line-height: 18px;
             color: var(--primary);
+            mix-blend-mode: exclusion;
             letter-spacing: -0.48px;
         }
     }

@@ -239,6 +239,23 @@
   });
 
 
+  gsap.to(".hero__inner", {
+    scale: 1,
+    rotate: 360,
+    // backgroundColor: "#fff",
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      end: "+=1500",
+      scrub: true,
+      pin: ".hero",
+      pinSpacing: true,
+      markers: true
+    },
+  });
+
+
 
 })(jQuery);
 

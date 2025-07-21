@@ -1776,7 +1776,7 @@ section {
 
 /* === header scss (index 01) === */
 .header-area {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -1852,6 +1852,7 @@ section {
   font-weight: 500;
   line-height: 18px;
   color: var(--primary);
+  mix-blend-mode: exclusion;
   letter-spacing: -0.48px;
 }
 .header-area .header__navicon {
@@ -2378,11 +2379,24 @@ section {
 
 /* === pages scss (index 01) === */
 /* === Hero Section (Home 01) === */
+.hero {
+  background: black;
+  width: 100%;
+}
 .hero__inner {
   overflow: hidden;
   padding-top: 146px;
   position: relative;
-  padding-bottom: 120px;
+  width: 100vw;
+  transform: scale(0.1) rotate(0deg);
+  transform-origin: center 16%;
+  margin: 0 auto;
+  background: #fff;
+}
+@media only screen and (max-width: 1919px) {
+  .hero__inner {
+    transform-origin: center 20%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .hero__inner {
@@ -2401,6 +2415,7 @@ section {
   width: auto;
   height: 100vh;
   z-index: 100;
+  mix-blend-mode: exclusion;
 }
 .hero-nav::before {
   top: 80px;
@@ -2419,6 +2434,7 @@ section {
 }
 .hero-nav__content img {
   margin-top: 205px;
+  mix-blend-mode: exclusion;
 }
 .hero-nav__content p {
   width: 152px;
@@ -2430,6 +2446,7 @@ section {
   transform: rotate(-90deg);
   letter-spacing: -0.48px;
   font-family: var(--font_bai);
+  mix-blend-mode: exclusion;
 }
 .hero-nav .side-toggle {
   top: 53%;
@@ -2449,6 +2466,7 @@ section {
 
 .hero__content {
   text-align: center;
+  margin-bottom: 120px;
 }
 .hero__content .sub-title {
   font-size: 20px;
