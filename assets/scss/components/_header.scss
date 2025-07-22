@@ -10,7 +10,7 @@
 
     &.scrolled {
         mix-blend-mode: normal;
-        background-color: transparent;
+        background-color: white;
 
         .header__logo {
             .logo-black {
@@ -171,6 +171,7 @@
     }
 
     .header-lan {
+        display: flex;
 
         @media #{$sm} {
             display: none;

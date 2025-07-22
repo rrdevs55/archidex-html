@@ -1785,7 +1785,7 @@ section {
 }
 .header-area.scrolled {
   mix-blend-mode: normal;
-  background-color: transparent;
+  background-color: white;
 }
 .header-area.scrolled .header__logo .logo-black {
   display: block;
@@ -1898,6 +1898,7 @@ section {
   color: var(--white);
 }
 .header-area .header-lan {
+  display: flex;
   border: 1px solid #DADADA;
   border-radius: 500px;
   padding: 0px 21px;
@@ -3545,6 +3546,9 @@ section {
 }
 .hero-2-showcase__box .title span {
   color: #999;
+}
+.hero-2-showcase__box .btn-black {
+  font-size: 13px;
 }
 
 /* ===about-us-2 Section (Home 02) === */
