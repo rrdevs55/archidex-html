@@ -169,7 +169,7 @@
     });
   });
 
-  /* === mouse-parallax (index 04) === */
+  /* === mouse-parallax (index 05) === */
   const elements = document.querySelectorAll(".mouse-parallax");
   elements.forEach((element) => {
     const inner = element.querySelector(".inner");
@@ -206,7 +206,7 @@
     });
   });
 
-  /* === mouse-parallax (index 04) === */
+  /* === mouse-parallax (index 06) === */
   const buttons = document.querySelectorAll(".rr-btn-primary");
   buttons.forEach(button => {
     const textEl = button.querySelector(".text");
@@ -238,24 +238,7 @@
     });
   });
 
-
-  // if ($('.hero__inner').length > 0) {
-  //   gsap.to(".hero__inner", {
-  //     scale: 1,
-  //     rotate: 360,
-  //     ease: "power4.out",
-  //     scrollTrigger: {
-  //       trigger: ".hero",
-  //       start: "top top",
-  //       end: "+=1000",
-  //       scrub: 1,
-  //       pin: ".hero",
-  //       pinSpacing: true,
-  //       markers: true
-  //     },
-  //   });
-  // }
-
+  /* === hero animation (index 07) === */
   let mm = gsap.matchMedia();
 
   mm.add("(min-width: 992px)", () => {
@@ -270,7 +253,6 @@
         scrub: 1,
         pin: ".hero",
         pinSpacing: true,
-        markers: true
       }
     });
   });
