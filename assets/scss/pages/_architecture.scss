@@ -46,12 +46,12 @@
             content: "";
             height: 10000px;
             position: absolute;
-            background-color: var(--border);
+            background-color: rgb(255 255 255 / 15%);
         }
 
         &__content {
             left: 25px;
-            bottom: 0;
+            bottom: 30px;
             display: flex;
             position: absolute;
 

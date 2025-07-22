@@ -50,6 +50,20 @@
     }
     pinned_header();
 
+    function pinned_header() {
+        $(window).on('scroll', function () {
+            var scroll = $(this).scrollTop();
+
+            if (scroll > 720) {
+                $('.header-area').addClass('scrolled');
+            } else {
+                $('.header-area').removeClass('scrolled');
+            }
+        });
+    }
+    pinned_header();
+
+
     /* === Register GSAP Plugins Js (index 02) === */
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother, CustomEase);
 
