@@ -239,22 +239,41 @@
   });
 
 
-  gsap.to(".hero__inner", {
-    scale: 1,
-    rotate: 360,
-    // backgroundColor: "#fff",
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".hero",
-      start: "top top",
-      end: "+=1500",
-      scrub: true,
-      pin: ".hero",
-      pinSpacing: true,
-      markers: true
-    },
-  });
+  // if ($('.hero__inner').length > 0) {
+  //   gsap.to(".hero__inner", {
+  //     scale: 1,
+  //     rotate: 360,
+  //     ease: "power4.out",
+  //     scrollTrigger: {
+  //       trigger: ".hero",
+  //       start: "top top",
+  //       end: "+=1000",
+  //       scrub: 1,
+  //       pin: ".hero",
+  //       pinSpacing: true,
+  //       markers: true
+  //     },
+  //   });
+  // }
 
+  let mm = gsap.matchMedia();
+
+  mm.add("(min-width: 992px)", () => {
+    gsap.to(".hero__inner", {
+      scale: 1,
+      rotate: 360,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "+=1000",
+        scrub: 1,
+        pin: ".hero",
+        pinSpacing: true,
+        markers: true
+      }
+    });
+  });
 
 
 })(jQuery);
